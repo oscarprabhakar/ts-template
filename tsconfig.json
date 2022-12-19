@@ -1,28 +1,40 @@
 {
-  "compilerOptions": {
-    "target": "ES2018",
-    "module": "CommonJS",
-    "lib": ["dom", "es2018"],
-    "sourceMap": true,
-    "outDir": "./dist",
-    "removeComments": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "resolveJsonModule": true,
-    "typeRoots": ["./src/@types/"],
-    "types": ["node", "mocha"],
-    "baseUrl": "."
-  },
-  "exclude": ["node_modules"],
-  "include": ["./src/**/*.tsx", "./src/**/*.ts"]
+    "compilerOptions": {
+        "target": "ES2018",
+        "module": "CommonJS",
+        "lib": [
+            "dom",
+            "es2018"
+        ],
+        "sourceMap": true,
+        "outDir": "./dist",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "moduleResolution": "node",
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "resolveJsonModule": true,
+        "typeRoots": [
+            "./src/@types/"
+        ],
+        "types": [
+            "node",
+            "mocha"
+        ],
+        "baseUrl": "."
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./src/**/*.tsx",
+        "./src/**/*.ts"
+    ]
 }
