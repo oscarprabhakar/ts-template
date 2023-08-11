@@ -20,38 +20,38 @@
         "prettier/prettier": "error"
     },
     "overrides": [
-    {
-        "files": ["**/*.js"],
-        "extends": ["joyn/presets/commonjs"]
-    },
-    {
-        "files": [ "**/*.ts",  "**/*.tsx", "**/*.test.ts"],
-        "extends": ["joyn/presets/typescript"],
-        "parserOptions": {
-            "project": "./tsconfig.eslint.json"
+        {
+            "files": ["**/*.js"],
+            "extends": ["joyn/presets/commonjs"]
         },
-        "settings": {
-            "import/resolver": {
-                "node": {
-                    "extensions": [".js", ".ts", ".tsx"]
+        {
+            "files": [ "**/*.ts",  "**/*.tsx", "**/*.test.ts"],
+            "extends": ["joyn/presets/typescript"],
+            "parserOptions": {
+                "project": "./tsconfig.eslint.json"
+            },
+            "settings": {
+                "import/resolver": {
+                    "node": {
+                        "extensions": [".js", ".ts", ".tsx"]
+                    }
+                },
+                "import/parsers": {
+                    "@typescript-eslint/parser": [".ts", ".tsx"]
                 }
             },
-            "import/parsers": {
-                "@typescript-eslint/parser": [".ts", ".tsx"]
+            "rules": {
+                "@typescript-eslint/explicit-function-return-type": "off",
+                "@typescript-eslint/no-shadow": "off"
             }
         },
-        "rules": {
-            "@typescript-eslint/explicit-function-return-type": "off",
-            "@typescript-eslint/no-shadow": "off"
+        {
+            "files": ["**/*.test.ts"],
+            "extends": ["joyn/presets/mocha"],
+            "rules": {
+                "mocha/no-skipped-tests": "error",
+                "array-callback-return": "off"
+            }
         }
-    },
-    {
-        "files": ["**/*.test.ts"],
-        "extends": ["joyn/presets/mocha"],
-        "rules": {
-            "mocha/no-skipped-tests": "error",
-            "array-callback-return": "off"
-        }
-    },
-
+    ]
 }
